@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lucas Randriamalala — Service Desk Technician</title>
+<meta name="description" content="Portfolio de Lucas Randriamalala — Technicien Service Desk & Support Réseaux. Cisco CCNA, Ethical Hacking, Orange Business." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ---------- Reset & Base ---------- */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#f7f4ee;
+    --bg-alt:#efeae0;
+    --ink:#1a1a1a;
+    --ink-soft:#4a4a4a;
+    --ink-muted:#8a8580;
+    --rule:#d9d3c7;
+    --accent:#a8421b;
+    --accent-soft:#c9633a;
+    --serif:'Cormorant Garamond', 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono:'JetBrains Mono', 'Courier New', monospace;
+    --maxw:1240px;
+  }
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    font-size:16px;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--ink);color:var(--bg)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  /* ---------- Layout ---------- */
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(24px,5vw,80px)}
+  section{padding:clamp(80px,12vh,160px) 0;position:relative}
+  .rule{height:1px;background:var(--rule);width:100%;margin:0}
+
+  /* ---------- Typography ---------- */
+  .display{
+    font-family:var(--serif);
+    font-weight:500;
+    letter-spacing:-0.02em;
+    line-height:0.95;
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.25em;
+    text-transform:uppercase;
+    color:var(--ink-muted);
+    font-weight:500;
+  }
+  .lead{
+    font-family:var(--serif);
+    font-size:clamp(20px,2.2vw,28px);
+    font-weight:400;
+    font-style:italic;
+    line-height:1.45;
+    color:var(--ink-soft);
+    max-width:62ch;
+  }
+  h2.section-title{
+    font-family:var(--serif);
+    font-size:clamp(48px,7vw,96px);
+    font-weight:500;
+    letter-spacing:-0.03em;
+    line-height:0.95;
+    margin-bottom:48px;
+  }
+  h2.section-title .num{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:0.2em;
+    color:var(--ink-muted);
+    vertical-align:top;
+    margin-right:24px;
+    font-weight:500;
+  }
+
+  /* ---------- Nav ---------- */
+  nav.top{
+    position:fixed;top:0;left:0;right:0;
+    z-index:50;
+    padding:24px clamp(24px,5vw,80px);
+    display:flex;justify-content:space-between;align-items:center;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    background:rgba(247,244,238,0.7);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease, background .3s ease;
+  }
+  nav.top.scrolled{border-bottom-color:var(--rule)}
+  .logo{
+    font-family:var(--serif);
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .logo span{color:var(--accent)}
+  .nav-right{display:flex;align-items:center;gap:36px}
+  .nav-links{display:flex;gap:32px;list-style:none}
+  .nav-links a{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    transition:color .2s;
+    position:relative;
+  }
+  .nav-links a::after{
+    content:'';position:absolute;left:0;bottom:-4px;
+    height:1px;width:0;background:var(--ink);
+    transition:width .3s ease;
+  }
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a:hover::after{width:100%}
+  .lang-switch{
+    display:flex;align-items:center;gap:0;
+    border:1px solid var(--rule);
+    border-radius:999px;
+    padding:3px;
+    background:transparent;
+  }
+  .lang-switch button{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.1em;
+    border:none;background:transparent;
+    padding:6px 12px;border-radius:999px;
+    cursor:pointer;color:var(--ink-soft);
+    transition:all .25s ease;
+  }
+  .lang-switch button.active{background:var(--ink);color:var(--bg)}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--ink)}
+
+  @media (max-width:860px){
+    .nav-links{display:none}
+    .menu-toggle{display:block}
+    .nav-links.open{
+      display:flex;flex-direction:column;
+      position:absolute;top:100%;left:0;right:0;
+      background:var(--bg);
+      padding:24px clamp(24px,5vw,80px);
+      border-bottom:1px solid var(--rule);
+      gap:20px;
+    }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;flex-direction:column;justify-content:center;
+    padding-top:140px;padding-bottom:80px;
+    position:relative;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:64px;
+    align-items:end;
+  }
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;gap:48px;align-items:start}
+  }
+  .hero-eyebrow{
+    display:flex;align-items:center;gap:16px;margin-bottom:40px;
+  }
+  .hero-eyebrow .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 0 0 rgba(168,66,27,0.4);
+    animation:pulse 2.4s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(168,66,27,0.5)}
+    70%{box-shadow:0 0 0 14px rgba(168,66,27,0)}
+    100%{box-shadow:0 0 0 0 rgba(168,66,27,0)}
+  }
+  h1.hero-title{
+    font-family:var(--serif);
+    font-size:clamp(56px,11vw,160px);
+    font-weight:500;
+    line-height:0.88;
+    letter-spacing:-0.04em;
+    margin-bottom:32px;
+  }
+  h1.hero-title em{
+    font-style:italic;
+    color:var(--accent);
+    font-weight:400;
+  }
+  .hero-sub{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:clamp(20px,2.4vw,32px);
+    font-weight:400;
+    line-height:1.4;
+    color:var(--ink-soft);
+    max-width:48ch;
+    margin-bottom:48px;
+  }
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:32px;
+    padding-top:24px;
+    border-top:1px solid var(--rule);
+  }
+  .hero-meta-item .label{
+    font-family:var(--mono);
+    font-size:10px;letter-spacing:0.2em;
+    text-transform:uppercase;color:var(--ink-muted);
+    display:block;margin-bottom:6px;
+  }
+  .hero-meta-item .value{
+    font-family:var(--serif);
+    font-size:18px;font-weight:500;
+  }
+  .portrait{
+    width:clamp(180px,22vw,280px);
+    aspect-ratio:3/4;
+    background:var(--bg-alt);
+    border:1px solid var(--rule);
+    position:relative;
+    overflow:hidden;
+  }
+  .portrait::before{
+    content:'';position:absolute;inset:0;
+    background-image:
+      linear-gradient(135deg, transparent 49%, var(--rule) 49%, var(--rule) 51%, transparent 51%);
+    background-size:14px 14px;
+    opacity:0.6;
+  }
+  .portrait-label{
+    position:absolute;bottom:16px;left:16px;right:16px;
+    font-family:var(--mono);font-size:9px;letter-spacing:0.2em;
+    text-transform:uppercase;color:var(--ink-muted);
+    text-align:center;
+  }
+  .scroll-hint{
+    position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+    font-family:var(--mono);font-size:10px;letter-spacing:0.25em;
+    text-transform:uppercase;color:var(--ink-muted);
+    display:flex;flex-direction:column;align-items:center;gap:8px;
+  }
+  .scroll-hint::after{
+    content:'';width:1px;height:32px;background:var(--ink-muted);
+    animation:scrolldown 2s ease-in-out infinite;
+  }
+  @keyframes scrolldown{
+    0%,100%{opacity:0;transform:scaleY(0);transform-origin:top}
+    50%{opacity:1;transform:scaleY(1)}
+  }
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:clamp(40px,8vw,120px);
+    align-items:start;
+  }
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:32px}}
+  .about-side .eyebrow{margin-bottom:16px;display:block}
+  .about-side h3{
+    font-family:var(--serif);
+    font-size:clamp(32px,4vw,52px);
+    font-weight:500;
+    line-height:1;
+    letter-spacing:-0.02em;
+  }
+  .about-body p{
+    font-family:var(--serif);
+    font-size:clamp(20px,1.8vw,26px);
+    font-weight:400;
+    line-height:1.5;
+    color:var(--ink);
+    margin-bottom:28px;
+  }
+  .about-body p:last-child{color:var(--ink-soft);font-style:italic}
+  .stats{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:32px;margin-top:48px;
+    padding-top:32px;border-top:1px solid var(--rule);
+  }
+  .stat .num{
+    font-family:var(--serif);
+    font-size:clamp(40px,5vw,64px);
+    font-weight:500;letter-spacing:-0.02em;
+    line-height:1;display:block;
+  }
+  .stat .num .plus{color:var(--accent)}
+  .stat .label{
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--ink-muted);margin-top:12px;display:block;
+  }
+
+  /* ---------- Experience ---------- */
+  .exp-list{display:flex;flex-direction:column;gap:0}
+  .exp-item{
+    display:grid;
+    grid-template-columns:140px 1fr auto;
+    gap:clamp(20px,4vw,64px);
+    padding:40px 0;
+    border-top:1px solid var(--rule);
+    align-items:start;
+    transition:padding-left .35s ease;
+    cursor:default;
+    position:relative;
+  }
+  .exp-item:last-child{border-bottom:1px solid var(--rule)}
+  .exp-item:hover{padding-left:16px}
+  .exp-item::before{
+    content:'';position:absolute;left:0;top:50%;
+    width:0;height:1px;background:var(--accent);
+    transition:width .35s ease;transform:translateY(-50%);
+  }
+  .exp-item:hover::before{width:8px}
+  .exp-date{
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--ink-muted);padding-top:8px;
+  }
+  .exp-main h4{
+    font-family:var(--serif);
+    font-size:clamp(28px,3.4vw,42px);
+    font-weight:500;line-height:1.1;letter-spacing:-0.015em;
+    margin-bottom:8px;
+  }
+  .exp-main .company{
+    font-family:var(--sans);
+    font-size:14px;font-weight:500;
+    color:var(--accent);
+    margin-bottom:20px;
+    letter-spacing:0.02em;
+  }
+  .exp-desc{
+    font-family:var(--sans);
+    font-size:15px;line-height:1.7;
+    color:var(--ink-soft);
+    max-width:60ch;
+  }
+  .exp-desc ul{list-style:none;padding:0}
+  .exp-desc li{
+    padding-left:20px;position:relative;margin-bottom:6px;
+  }
+  .exp-desc li::before{
+    content:'—';position:absolute;left:0;color:var(--ink-muted);
+  }
+  .exp-tag{
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--ink-muted);
+    border:1px solid var(--rule);
+    padding:6px 12px;border-radius:999px;
+    white-space:nowrap;
+  }
+  @media (max-width:780px){
+    .exp-item{grid-template-columns:1fr;gap:12px}
+    .exp-tag{justify-self:start}
+  }
+
+  /* ---------- Skills ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+  }
+  .skill-cat{
+    background:var(--bg);
+    padding:36px 32px;
+    transition:background .3s ease;
+  }
+  .skill-cat:hover{background:var(--bg-alt)}
+  .skill-cat h4{
+    font-family:var(--serif);
+    font-size:24px;font-weight:600;
+    letter-spacing:-0.01em;
+    margin-bottom:8px;
+  }
+  .skill-cat .cat-num{
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.2em;color:var(--ink-muted);
+    display:block;margin-bottom:20px;
+  }
+  .skill-tags{
+    display:flex;flex-wrap:wrap;gap:8px;
+  }
+  .skill-tag{
+    font-family:var(--mono);font-size:11px;
+    padding:6px 12px;
+    background:var(--bg-alt);
+    border:1px solid transparent;
+    border-radius:4px;
+    color:var(--ink-soft);
+    transition:all .2s;
+    letter-spacing:0.02em;
+  }
+  .skill-cat:hover .skill-tag{background:var(--bg);border-color:var(--rule)}
+  .skill-tag:hover{
+    background:var(--ink);color:var(--bg);border-color:var(--ink);
+    transform:translateY(-2px);
+  }
+
+  /* ---------- Certifications & Education ---------- */
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(40px,6vw,80px);
+  }
+  @media (max-width:780px){.two-col{grid-template-columns:1fr;gap:64px}}
+  .panel-title{
+    font-family:var(--serif);
+    font-size:clamp(32px,4vw,48px);
+    font-weight:500;line-height:1;
+    letter-spacing:-0.02em;
+    margin-bottom:40px;
+    padding-bottom:20px;
+    border-bottom:1px solid var(--rule);
+  }
+  .panel-title .ico{
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:0.2em;color:var(--ink-muted);
+    display:block;margin-bottom:8px;font-weight:500;
+  }
+  .item{
+    padding:24px 0;border-bottom:1px solid var(--rule);
+    display:flex;justify-content:space-between;gap:24px;
+    align-items:start;
+  }
+  .item:last-child{border-bottom:none}
+  .item-main h5{
+    font-family:var(--serif);
+    font-size:22px;font-weight:600;
+    line-height:1.2;margin-bottom:6px;
+    letter-spacing:-0.01em;
+  }
+  .item-main .org{
+    font-size:13px;color:var(--ink-soft);
+    font-family:var(--sans);
+  }
+  .item-date{
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--ink-muted);white-space:nowrap;padding-top:4px;
+  }
+
+  /* ---------- Languages ---------- */
+  .langs{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+  }
+  @media (max-width:680px){.langs{grid-template-columns:1fr}}
+  .lang{
+    padding:48px 32px;
+    border-right:1px solid var(--rule);
+    text-align:left;
+    transition:background .3s ease;
+  }
+  .lang:last-child{border-right:none}
+  @media (max-width:680px){
+    .lang{border-right:none;border-bottom:1px solid var(--rule)}
+    .lang:last-child{border-bottom:none}
+  }
+  .lang:hover{background:var(--bg-alt)}
+  .lang .name{
+    font-family:var(--serif);
+    font-size:clamp(32px,3.6vw,44px);
+    font-weight:500;letter-spacing:-0.02em;
+    margin-bottom:16px;line-height:1;
+  }
+  .lang .level{
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--ink-muted);margin-bottom:20px;display:block;
+  }
+  .lang .bar{
+    height:1px;background:var(--rule);position:relative;
+  }
+  .lang .bar span{
+    position:absolute;left:0;top:0;height:100%;
+    background:var(--accent);
+    width:0;transition:width 1.2s ease;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{
+    background:var(--ink);color:var(--bg);
+    padding:clamp(80px,14vh,160px) 0;
+  }
+  .contact .eyebrow{color:rgba(247,244,238,0.5)}
+  .contact h2{
+    font-family:var(--serif);
+    font-size:clamp(56px,9vw,140px);
+    font-weight:500;line-height:0.9;
+    letter-spacing:-0.03em;
+    margin-bottom:48px;
+  }
+  .contact h2 em{font-style:italic;color:var(--accent-soft);font-weight:400}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:clamp(40px,6vw,80px);
+    align-items:end;
+    padding-top:48px;
+    border-top:1px solid rgba(247,244,238,0.15);
+  }
+  @media (max-width:780px){.contact-grid{grid-template-columns:1fr;gap:48px;align-items:start}}
+  .contact-cta{
+    display:inline-flex;align-items:center;gap:16px;
+    font-family:var(--serif);
+    font-size:clamp(28px,4vw,56px);
+    font-style:italic;font-weight:400;
+    color:var(--bg);
+    border-bottom:1px solid rgba(247,244,238,0.3);
+    padding-bottom:8px;
+    transition:border-color .3s, gap .3s;
+  }
+  .contact-cta:hover{border-color:var(--accent-soft);gap:24px}
+  .contact-cta svg{transition:transform .3s}
+  .contact-cta:hover svg{transform:translate(4px,-4px)}
+  .contact-links{display:flex;flex-direction:column;gap:20px}
+  .contact-link{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:16px 0;
+    border-bottom:1px solid rgba(247,244,238,0.15);
+    transition:padding-left .3s;
+  }
+  .contact-link:hover{padding-left:8px}
+  .contact-link .lbl{
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.2em;text-transform:uppercase;
+    color:rgba(247,244,238,0.5);
+  }
+  .contact-link .val{
+    font-family:var(--serif);font-size:18px;
+    color:var(--bg);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--ink);color:rgba(247,244,238,0.5);
+    padding:32px 0;
+    border-top:1px solid rgba(247,244,238,0.1);
+  }
+  footer .wrap{
+    display:flex;justify-content:space-between;align-items:center;
+    gap:24px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.2em;text-transform:uppercase;
+  }
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+
+  /* ---------- Lang toggle ---------- */
+  [data-fr],[data-en]{display:none}
+  html[data-lang="fr"] [data-fr]{display:inline}
+  html[data-lang="en"] [data-en]{display:inline}
+  html[data-lang="fr"] [data-fr].block{display:block}
+  html[data-lang="en"] [data-en].block{display:block}
+  html[data-lang="fr"] [data-fr].flex{display:flex}
+  html[data-lang="en"] [data-en].flex{display:flex}
+  html[data-lang="fr"] [data-fr].list{display:list-item}
+  html[data-lang="en"] [data-en].list{display:list-item}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="top" id="topNav">
+  <a href="#top" class="logo" data-testid="logo-link">Lucas<span>.</span></a>
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-testid="nav-about"><span data-fr>À propos</span><span data-en>About</span></a></li>
+      <li><a href="#experience" data-testid="nav-experience"><span data-fr>Expérience</span><span data-en>Experience</span></a></li>
+      <li><a href="#skills" data-testid="nav-skills"><span data-fr>Compétences</span><span data-en>Skills</span></a></li>
+      <li><a href="#education" data-testid="nav-education"><span data-fr>Formation</span><span data-en>Education</span></a></li>
+      <li><a href="#contact" data-testid="nav-contact">Contact</a></li>
+    </ul>
+    <div class="lang-switch" role="tablist" aria-label="Language switch">
+      <button class="active" data-set-lang="fr" data-testid="lang-fr-btn">FR</button>
+      <button data-set-lang="en" data-testid="lang-en-btn">EN</button>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu" data-testid="menu-toggle">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-eyebrow reveal">
+      <span class="dot"></span>
+      <span class="eyebrow">
+        <span data-fr>Disponible — Antananarivo, Madagascar</span>
+        <span data-en>Available — Antananarivo, Madagascar</span>
+      </span>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-title reveal" data-testid="hero-title">
+          Lucas<br/>
+          Randriamalala<em>.</em>
+        </h1>
+        <p class="hero-sub reveal">
+          <span data-fr>Technicien Service Desk &amp; Support Réseaux, articulant <em>diagnostic</em>, <em>résolution</em> et <em>satisfaction client</em> chez Orange Business.</span>
+          <span data-en>Service Desk Technician &amp; Network Support specialist — connecting <em>diagnosis</em>, <em>resolution</em> and <em>client satisfaction</em> at Orange Business.</span>
+        </p>
+        <div class="hero-meta reveal">
+          <div class="hero-meta-item">
+            <span class="label"><span data-fr>Rôle</span><span data-en>Role</span></span>
+            <span class="value">Service Desk Technician</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="label"><span data-fr>Expérience</span><span data-en>Experience</span></span>
+            <span class="value"><span data-fr>3+ années</span><span data-en>3+ years</span></span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="label">Certifications</span>
+            <span class="value">CCNA · Ethical Hacking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portrait reveal" data-testid="hero-portrait">
+        <!-- Remplacer par <img src="photo.jpg" alt="Lucas Randriamalala"> quand prêt -->
+        <div class="portrait-label">
+          <span data-fr>Photo à insérer</span>
+          <span data-en>Photo placeholder</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <span data-fr>Défiler</span><span data-en>Scroll</span>
+  </div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-side reveal">
+        <span class="eyebrow">— 01</span>
+        <h3>
+          <span data-fr>À propos</span>
+          <span data-en>About</span>
+        </h3>
+      </div>
+      <div class="about-body reveal">
+        <p data-fr>Technicien Service Desk et Support Réseaux avec plus de <strong>3 ans d'expérience</strong> chez Orange Business. Spécialisé dans le diagnostic, la résolution et la prévention d'incidents réseau.</p>
+        <p data-en>Service Desk &amp; Network Support Technician with more than <strong>3 years of experience</strong> at Orange Business. Specialised in diagnosing, resolving and preventing network incidents.</p>
+
+        <p data-fr>Je combine des compétences techniques solides — <em>Cisco, Linux, Windows</em> — avec une approche orientée satisfaction client. Rigoureux, réactif et curieux, je m'engage dans une formation continue pour rester à jour avec les nouvelles technologies.</p>
+        <p data-en>I combine solid technical skills — <em>Cisco, Linux, Windows</em> — with a customer-first mindset. Rigorous, responsive and curious, I'm committed to continuous learning and staying current with new technologies.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="num">3<span class="plus">+</span></span>
+            <span class="label"><span data-fr>Années chez Orange</span><span data-en>Years at Orange</span></span>
+          </div>
+          <div class="stat">
+            <span class="num">2</span>
+            <span class="label"><span data-fr>Certifications</span><span data-en>Certifications</span></span>
+          </div>
+          <div class="stat">
+            <span class="num">3</span>
+            <span class="label"><span data-fr>Langues parlées</span><span data-en>Languages spoken</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" style="background:var(--bg-alt)">
+  <div class="wrap">
+    <h2 class="section-title reveal">
+      <span class="num">02 —</span>
+      <span data-fr>Expérience</span>
+      <span data-en>Experience</span>
+    </h2>
+
+    <div class="exp-list">
+
+      <article class="exp-item reveal">
+        <div class="exp-date">Jun 2025 — <span data-fr>Présent</span><span data-en>Present</span></div>
+        <div class="exp-main">
+          <h4 data-fr>Technicien Service Client SAV</h4>
+          <h4 data-en>Customer Service Technician (SAV)</h4>
+          <div class="company">Orange Business</div>
+          <div class="exp-desc">
+            <ul>
+              <li data-fr class="list"><span data-fr>Support technique N1/N2 sur équipements réseau&nbsp;: switches, routeurs, firewalls.</span></li>
+              <li data-en class="list">N1/N2 technical support on network equipment: switches, routers, firewalls.</li>
+              <li data-fr class="list">Diagnostic et résolution d'incidents LAN, WAN, Wi-Fi à distance.</li>
+              <li data-en class="list">Remote diagnostic and resolution of LAN, WAN, Wi-Fi incidents.</li>
+              <li data-fr class="list">Configuration, réinitialisation et mises à jour des équipements.</li>
+              <li data-en class="list">Configuration, reset and firmware updates on equipment.</li>
+              <li data-fr class="list">Rédaction de rapports techniques &amp; collaboration supervision/déploiement.</li>
+              <li data-en class="list">Technical reporting &amp; collaboration with supervision and deployment teams.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-tag">Network · N1/N2</div>
+      </article>
+
+      <article class="exp-item reveal">
+        <div class="exp-date">Jul 2022 — Jun 2025</div>
+        <div class="exp-main">
+          <h4>Local Delivery Manager</h4>
+          <div class="company">Orange Business</div>
+          <div class="exp-desc">
+            <ul>
+              <li data-fr class="list">Suivi et coordination des déploiements de services clients.</li>
+              <li data-en class="list">Tracking and coordinating customer service deployments.</li>
+              <li data-fr class="list">Collaboration avec les chefs de projet pour la mise en œuvre des offres BVPN.</li>
+              <li data-en class="list">Collaboration with project managers to roll out BVPN offerings.</li>
+              <li data-fr class="list">Gestion proactive du portefeuille clients et réunions multisites.</li>
+              <li data-en class="list">Proactive client portfolio management and multi-site meetings.</li>
+              <li data-fr class="list">Optimisation des processus de livraison — satisfaction et respect des délais.</li>
+              <li data-en class="list">Optimising delivery processes — satisfaction and on-time execution.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-tag">Delivery · BVPN</div>
+      </article>
+
+      <article class="exp-item reveal">
+        <div class="exp-date">2020 — 2022</div>
+        <div class="exp-main">
+          <h4 data-fr>Conseiller Client</h4>
+          <h4 data-en>Customer Advisor</h4>
+          <div class="company">Konecta Madagascar</div>
+          <div class="exp-desc">
+            <ul>
+              <li data-fr class="list">Gestion des appels entrants/sortants et planification de rendez-vous.</li>
+              <li data-en class="list">Inbound/outbound call handling and appointment scheduling.</li>
+              <li data-fr class="list">Traitement des demandes clients et tâches de back-office.</li>
+              <li data-en class="list">Processing customer requests and back-office tasks.</li>
+              <li data-fr class="list">Résolution de problèmes et fidélisation de la clientèle.</li>
+              <li data-en class="list">Problem resolution and customer loyalty building.</li>
+              <li data-fr class="list">Communication professionnelle et empathique.</li>
+              <li data-en class="list">Professional and empathetic communication.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-tag">Customer Care</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <h2 class="section-title reveal">
+      <span class="num">03 —</span>
+      <span data-fr>Compétences</span>
+      <span data-en>Skills</span>
+    </h2>
+
+    <div class="skills-grid reveal">
+
+      <div class="skill-cat">
+        <span class="cat-num">— 01</span>
+        <h4 data-fr>Réseaux &amp; Systèmes</h4>
+        <h4 data-en>Networks &amp; Systems</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Cisco CCNA</span>
+          <span class="skill-tag">LAN / WAN</span>
+          <span class="skill-tag">Wi-Fi</span>
+          <span class="skill-tag">Switches</span>
+          <span class="skill-tag">Routeurs</span>
+          <span class="skill-tag">Firewalls</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Windows</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <span class="cat-num">— 02</span>
+        <h4 data-fr>Cybersécurité</h4>
+        <h4 data-en>Cybersecurity</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Ethical Hacking</span>
+          <span class="skill-tag" data-fr>Sécurité Informatique</span>
+          <span class="skill-tag" data-en>IT Security</span>
+          <span class="skill-tag" data-fr>Prévention d'incidents</span>
+          <span class="skill-tag" data-en>Incident prevention</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <span class="cat-num">— 03</span>
+        <h4 data-fr>Développement</h4>
+        <h4 data-en>Development</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Python</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <span class="cat-num">— 04</span>
+        <h4 data-fr>Bureautique &amp; Gestion</h4>
+        <h4 data-en>Office &amp; Management</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Excel Avancé</span>
+          <span class="skill-tag">XLSTAT</span>
+          <span class="skill-tag">VBA</span>
+          <span class="skill-tag">GanttProject</span>
+          <span class="skill-tag">Pack Office</span>
+          <span class="skill-tag">Notion</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <span class="cat-num">— 05</span>
+        <h4 data-fr>Soft Skills</h4>
+        <h4 data-en>Soft Skills</h4>
+        <div class="skill-tags">
+          <span class="skill-tag" data-fr>Leadership</span>
+          <span class="skill-tag" data-en>Leadership</span>
+          <span class="skill-tag" data-fr>Management d'équipe</span>
+          <span class="skill-tag" data-en>Team management</span>
+          <span class="skill-tag" data-fr>Rigueur</span>
+          <span class="skill-tag" data-en>Rigor</span>
+          <span class="skill-tag" data-fr>Réactivité</span>
+          <span class="skill-tag" data-en>Responsiveness</span>
+          <span class="skill-tag" data-fr>Communication</span>
+          <span class="skill-tag" data-en>Communication</span>
+          <span class="skill-tag" data-fr>Empathie</span>
+          <span class="skill-tag" data-en>Empathy</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <span class="cat-num">— 06</span>
+        <h4 data-fr>Méthodes</h4>
+        <h4 data-en>Methods</h4>
+        <div class="skill-tags">
+          <span class="skill-tag" data-fr>Gestion de projet</span>
+          <span class="skill-tag" data-en>Project management</span>
+          <span class="skill-tag" data-fr>Support N1/N2</span>
+          <span class="skill-tag" data-en>N1/N2 support</span>
+          <span class="skill-tag" data-fr>Documentation technique</span>
+          <span class="skill-tag" data-en>Technical documentation</span>
+          <span class="skill-tag" data-fr>Automatisation réseau</span>
+          <span class="skill-tag" data-en>Network automation</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS & EDUCATION ============ -->
+<section id="education" style="background:var(--bg-alt)">
+  <div class="wrap">
+    <div class="two-col">
+
+      <div class="reveal">
+        <h3 class="panel-title">
+          <span class="ico">— 04 / <span data-fr>Certifications</span><span data-en>Certifications</span></span>
+          <span data-fr>Certifications</span>
+          <span data-en>Certifications</span>
+        </h3>
+        <div class="item">
+          <div class="item-main">
+            <h5>CCNA — Cisco Certified Network Associate</h5>
+            <div class="org" data-fr>Cisco Networking Academy · Administration réseaux et systèmes</div>
+            <div class="org" data-en>Cisco Networking Academy · Network &amp; Systems Administration</div>
+          </div>
+          <div class="item-date">Feb–Aug 2024</div>
+        </div>
+        <div class="item">
+          <div class="item-main">
+            <h5>Ethical Hacking Fundamentals</h5>
+            <div class="org" data-fr>ESTI Formation Continue · Sécurité Informatique</div>
+            <div class="org" data-en>ESTI Continuing Education · IT Security</div>
+          </div>
+          <div class="item-date">2024</div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <h3 class="panel-title">
+          <span class="ico">— 05 / <span data-fr>Formation</span><span data-en>Education</span></span>
+          <span data-fr>Formation</span>
+          <span data-en>Education</span>
+        </h3>
+        <div class="item">
+          <div class="item-main">
+            <h5 data-fr>Licence en Systèmes d'Information de Gestion</h5>
+            <h5 data-en>Bachelor in Management Information Systems</h5>
+            <div class="org">ESMIA</div>
+          </div>
+          <div class="item-date">2023</div>
+        </div>
+        <div class="item">
+          <div class="item-main">
+            <h5 data-fr>Licence en Sciences de la Société</h5>
+            <h5 data-en>Bachelor in Social Sciences</h5>
+            <div class="org">ESMIA Mahamasina</div>
+          </div>
+          <div class="item-date">2017–2020</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ LANGUAGES ============ -->
+<section id="languages">
+  <div class="wrap">
+    <h2 class="section-title reveal">
+      <span class="num">06 —</span>
+      <span data-fr>Langues</span>
+      <span data-en>Languages</span>
+    </h2>
+
+    <div class="langs reveal">
+      <div class="lang">
+        <div class="name" data-fr>Malagasy</div>
+        <div class="name" data-en>Malagasy</div>
+        <span class="level" data-fr>Langue maternelle</span>
+        <span class="level" data-en>Native</span>
+        <div class="bar"><span data-w="100"></span></div>
+      </div>
+      <div class="lang">
+        <div class="name" data-fr>Français</div>
+        <div class="name" data-en>French</div>
+        <span class="level" data-fr>Courant — Professionnel</span>
+        <span class="level" data-en>Fluent — Professional</span>
+        <div class="bar"><span data-w="95"></span></div>
+      </div>
+      <div class="lang">
+        <div class="name" data-fr>Anglais</div>
+        <div class="name" data-en>English</div>
+        <span class="level" data-fr>Intermédiaire — Professionnel</span>
+        <span class="level" data-en>Intermediate — Professional</span>
+        <div class="bar"><span data-w="70"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <span class="eyebrow reveal">— 07 / Contact</span>
+    <h2 class="reveal" style="margin-top:24px">
+      <span data-fr>Travaillons<br/><em>ensemble</em>.</span>
+      <span data-en>Let's work<br/><em>together</em>.</span>
+    </h2>
+
+    <div class="contact-grid">
+      <div class="reveal">
+        <a class="contact-cta" href="mailto:serginolucas@gmail.com" data-testid="contact-email-cta">
+          <span data-fr>Écrivez-moi</span>
+          <span data-en>Drop me a line</span>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
+
+      <div class="contact-links reveal">
+        <a class="contact-link" href="mailto:serginolucas@gmail.com" data-testid="link-email">
+          <span class="lbl">Email</span>
+          <span class="val">serginolucas@gmail.com</span>
+        </a>
+        <a class="contact-link" href="tel:+261346149844" data-testid="link-phone">
+          <span class="lbl"><span data-fr>Téléphone</span><span data-en>Phone</span></span>
+          <span class="val">+261 34 61 498 44</span>
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/in/lucas-sergino" target="_blank" rel="noopener" data-testid="link-linkedin">
+          <span class="lbl">LinkedIn</span>
+          <span class="val">/in/lucas-sergino</span>
+        </a>
+        <a class="contact-link" href="https://github.com/lylysmart2208" target="_blank" rel="noopener" data-testid="link-github">
+          <span class="lbl">GitHub</span>
+          <span class="val">@lylysmart2208</span>
+        </a>
+        <div class="contact-link">
+          <span class="lbl"><span data-fr>Localisation</span><span data-en>Location</span></span>
+          <span class="val">Antananarivo · Madagascar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Lucas Randriamalala</span>
+    <span data-fr>Conçu &amp; développé à Antananarivo</span>
+    <span data-en>Designed &amp; built in Antananarivo</span>
+  </div>
+</footer>
+
+<script>
+  // ----- Year -----
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ----- Language switch -----
+  const root = document.documentElement;
+  const langButtons = document.querySelectorAll('[data-set-lang]');
+  function setLang(lang){
+    root.setAttribute('data-lang', lang);
+    root.setAttribute('lang', lang);
+    langButtons.forEach(b => b.classList.toggle('active', b.dataset.setLang === lang));
+    try { localStorage.setItem('portfolio-lang', lang); } catch(e){}
+  }
+  langButtons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.setLang)));
+  try {
+    const saved = localStorage.getItem('portfolio-lang');
+    if (saved) setLang(saved);
+  } catch(e){}
+
+  // ----- Mobile menu -----
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // ----- Nav scrolled state -----
+  const topNav = document.getElementById('topNav');
+  window.addEventListener('scroll', () => {
+    topNav.classList.toggle('scrolled', window.scrollY > 24);
+  });
+
+  // ----- Reveal on scroll -----
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        e.target.classList.add('in');
+        // animate language bars
+        e.target.querySelectorAll('.bar span[data-w]').forEach(s => {
+          s.style.width = s.dataset.w + '%';
+        });
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
