@@ -245,6 +245,26 @@
     text-transform:uppercase;color:var(--ink-muted);
     text-align:center;
   }
+  .hero-actions{
+    display:flex;flex-wrap:wrap;gap:16px;
+    margin-top:40px;margin-bottom:48px;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:12px;
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:0.22em;text-transform:uppercase;
+    padding:16px 28px;border-radius:999px;
+    border:1px solid var(--ink);
+    background:var(--ink);color:var(--bg);
+    cursor:pointer;transition:all .3s ease;
+    text-decoration:none;
+  }
+  .btn:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+  .btn svg{transition:transform .3s}
+  .btn:hover svg{transform:translateY(2px)}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .btn.ghost:hover svg{transform:translate(3px,-3px)}
   .scroll-hint{
     position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
     font-family:var(--mono);font-size:10px;letter-spacing:0.25em;
@@ -623,7 +643,19 @@
           <span data-fr>Technicien Service Desk &amp; Support Réseaux, articulant <em>diagnostic</em>, <em>résolution</em> et <em>satisfaction client</em> chez Orange Business.</span>
           <span data-en>Service Desk Technician &amp; Network Support specialist — connecting <em>diagnosis</em>, <em>resolution</em> and <em>client satisfaction</em> at Orange Business.</span>
         </p>
-        <div class="hero-meta reveal">
+        <div class="hero-actions reveal">
+          <a class="btn" href="cv-lucas-randriamalala.pdf" download data-testid="download-cv-btn">
+            <span data-fr>Télécharger le CV</span>
+            <span data-en>Download CV</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v14"/><polyline points="6 11 12 17 18 11"/><line x1="4" y1="21" x2="20" y2="21"/></svg>
+          </a>
+          <a class="btn ghost" href="#contact" data-testid="hero-contact-btn">
+            <span data-fr>Me contacter</span>
+            <span data-en>Get in touch</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <div class="hero-meta reveal" style="margin-top:0">
           <div class="hero-meta-item">
             <span class="label"><span data-fr>Rôle</span><span data-en>Role</span></span>
             <span class="value">Service Desk Technician</span>
